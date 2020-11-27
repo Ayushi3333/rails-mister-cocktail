@@ -20,38 +20,47 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-.container-cocktail {
-    display: grid;
-}
 
 .navbar-cocktail {
     justify-content: space-between;
+    margin-left: 20px;
   }
   
   .navbar-cocktail .navbar-collapse {
     flex-grow: 0;
   }
   
-  .navbar-cocktail .navbar-brand i {
+  .navbar-cocktail i {
     width: 40px;
   }
 
   .page-name {
     font-family: 'Lobster', cursive;
+    margin-left: 30px;
+  }
+
+  .card-title > a{
+    color: white;
+    font-size: 32px;
   }
 
   .card-title {
+    
     font-family:'Nerko One', cursive;
+    
   }
 
-  .container-buttons {
-      color: antiquewhite;
+  .navbar-nav {
+    margin-right: 100px;
+  }
+  .buttons {
+      background-color: antiquewhite;
+      border-radius: 5px;
   }
 
   .card-body {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: fill;
+    background-size: cover;
+    height: 300px;
   }
 
   img {
