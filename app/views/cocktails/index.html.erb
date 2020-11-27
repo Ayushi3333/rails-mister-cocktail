@@ -1,7 +1,33 @@
-<h1>Fancy Cocktails</h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-cocktail">
+  <a class="navbar-brand" href="#">
+    <i class="fas fa-cocktail"></i>
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="container">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<h1 class="page-name">Fancy Cocktails</h1>
+
+<div class="m-auto" style="width:90%">
+  <div class="row d-flex justify-content-around">
     <% @cocktails.each do |cocktail| %>
-    <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+   <div class="card m-1 col-12 col-lg-3 p-0">
+        <img src="https://source.unsplash.com/random/300x200" class="card-img-top" alt="">
+        <div class="card-body">
+  <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+</div>
+</div>
     <% end %>
 </div>
+</div>
+

@@ -1,11 +1,15 @@
-<h1><%= @cocktail.name %></h1>
+  <div class="container">
+  <h1 class="page-name"><%= @cocktail.name %></h1>
 <ul>
-
+  <h4>Recipe for this delicious concoction -</h4>
   <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.ingredient.name %> - <%= dose.description %></li>
+  <li><%= dose.ingredient.name %> - <%= dose.description %> <%= link_to dose_path(dose), method: :delete do %>
+  <i class="fas fa-trash-alt"></i>  </li>
+  <% end %>
   <% end %>
 </ul>
 
-<%= link_to "Add your ingredient", new_cocktail_dose_path(@cocktail) %>
+<p class="button-ingredient"><%= link_to "Add your ingredient", new_cocktail_dose_path(@cocktail), class:"btn btn-primary" %></p>
 <br>
-<%= link_to "Back to list", cocktails_path %>
+<%= link_to "Back to list", cocktails_path, class:"btn btn-primary"  %>
+</div>
